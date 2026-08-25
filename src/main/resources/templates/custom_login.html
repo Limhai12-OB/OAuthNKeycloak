@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Sign in with GitHub</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+          rel="stylesheet">
+
+    <style>
+        .login-with-github-btn {
+            transition: background-color .3s, box-shadow .3s;
+
+            padding: 12px 16px 12px 42px;
+            border: none;
+            border-radius: 3px;
+
+            box-shadow:
+                    0 -1px 0 rgba(0, 0, 0, .04),
+                    0 1px 1px rgba(0, 0, 0, .25);
+
+            color: #24292f;
+            font-size: 14px;
+            font-weight: 500;
+
+            font-family:
+                    -apple-system,
+                    BlinkMacSystemFont,
+                    "Segoe UI",
+                    Roboto,
+                    Oxygen,
+                    Ubuntu,
+                    Cantarell,
+                    "Fira Sans",
+                    "Droid Sans",
+                    "Helvetica Neue",
+                    sans-serif;
+
+            background-color: white;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24'%3E%3Cpath fill='%2324292f' d='M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.17c-3.2.7-3.88-1.36-3.88-1.36-.53-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.17A10.9 10.9 0 0 1 12 8.16c.97 0 1.94.13 2.85.38 2.19-1.48 3.15-1.17 3.15-1.17.62 1.57.23 2.73.11 3.02.73.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.04.78 2.1v3.12c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z'/%3E%3C/svg%3E");
+
+            background-repeat: no-repeat;
+            background-position: 12px 11px;
+
+            cursor: pointer;
+        }
+
+        .login-with-github-btn:hover {
+            box-shadow:
+                    0 -1px 0 rgba(0, 0, 0, .04),
+                    0 2px 4px rgba(0, 0, 0, .25);
+        }
+
+        .login-with-github-btn:active {
+            background-color: #eeeeee;
+        }
+
+        .login-with-github-btn:focus {
+            outline: none;
+
+            box-shadow:
+                    0 -1px 0 rgba(0, 0, 0, .04),
+                    0 2px 4px rgba(0, 0, 0, .25),
+                    0 0 0 3px #c8dafc;
+        }
+
+        .login-with-github-btn:disabled {
+            filter: grayscale(100%);
+            background-color: #ebebeb;
+
+            box-shadow:
+                    0 -1px 0 rgba(0, 0, 0, .04),
+                    0 1px 1px rgba(0, 0, 0, .25);
+
+            cursor: not-allowed;
+        }
+
+        body {
+            text-align: center;
+            padding-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+<form action="/oauth2/authorization/github" method="GET">
+    <button type="submit" class="login-with-github-btn">
+        Sign in with GitHub
+    </button>
+</form>
+
+</body>
+</html>
