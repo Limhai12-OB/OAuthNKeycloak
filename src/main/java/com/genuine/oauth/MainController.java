@@ -19,11 +19,6 @@ public class MainController {
         return "Welcome!";
     }
 
-//    @RequestMapping("/user")
-//    public Principal user(Principal user) {
-//        return user;
-//    }
-
     @GetMapping("/user")
     public Map<String, Object> user(@AuthenticationPrincipal OidcUser user){
         return user.getClaims();
@@ -40,5 +35,4 @@ public class MainController {
         );
 
     }
-
 }

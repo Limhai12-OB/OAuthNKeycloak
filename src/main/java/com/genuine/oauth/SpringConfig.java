@@ -16,7 +16,6 @@ public class SpringConfig {
                         .anyRequest().authenticated()
                 )
                 .oauth2Login(oauth -> {});
-
         return http.build();
     }
 }
